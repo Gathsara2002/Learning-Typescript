@@ -51,9 +51,9 @@ console.log(a);
 a = 20;
 console.log(a);
 
-let b:any="Any";
+let b: any = "Any";
 console.log(b);
-b=true;
+b = true;
 console.log(b);
 
 /*function testAnyType(c) {
@@ -62,10 +62,33 @@ console.log(b);
 output-server/index.ts:59:22 - error TS7006: Parameter 'c' implicitly has an 'any' type.
 */
 
-function testAnyType(c:any) {
+function testAnyType(c: any) {
     console.log(c);
 }
 
 //output - Testing
 
 testAnyType("Testing");
+
+/*-----------------------------------------------------------------*/
+
+//Arrays
+
+//Without type safety
+let numbers = [1, 2, 3, '4'];
+numbers.push(5);
+numbers.push('true');
+console.log(numbers);
+
+//With type safety
+let ages: number[] = [20, 30, 40];
+ages.push(50);
+//ages.push('John'); //error
+console.log(ages);
+
+//let arr=[];
+//console.log(typeof arr); //server/index.ts:90:20 - error TS7005: Variable 'arr' implicitly has an 'any[]' type.
+
+//Initialize empty array with type
+let arr: string[] = [];
+console.log(typeof arr);
