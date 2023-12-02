@@ -30,11 +30,42 @@ console.log(myName + " - " + age + " - " + isStudent + " - " + salary);*/
 
 //Implicit
 
+/*
 let myName = "Liviru";
 let age = 21;
 let isStudent = true;
 let salary = 100_000_000;
 console.log(myName + " - " + age + " - " + isStudent + " - " + salary);
+*/
 
 //myName=12; //error
 //age="a";   //error
+
+/*-----------------------------------------------------------------*/
+
+//Type : any
+
+let a;
+a = "John";
+console.log(a);
+a = 20;
+console.log(a);
+
+let b:any="Any";
+console.log(b);
+b=true;
+console.log(b);
+
+/*function testAnyType(c) {
+    console.log(c);
+}
+output-server/index.ts:59:22 - error TS7006: Parameter 'c' implicitly has an 'any' type.
+*/
+
+function testAnyType(c:any) {
+    console.log(c);
+}
+
+//output - Testing
+
+testAnyType("Testing");
