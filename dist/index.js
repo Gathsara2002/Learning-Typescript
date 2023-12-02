@@ -75,8 +75,6 @@ let user = [1, "John"];
 console.log(user);
 console.log(user[0]);
 console.log(user[1]);
-user.push("A");
-console.log(user);
 let detail = ["Name", 20];
 console.log(detail);
 console.log(detail[0]);
@@ -85,3 +83,12 @@ console.log(detail[1]);
 let [x, y] = detail;
 console.log(x);
 console.log(y);
+//Add new element to tuple
+let test = ['A', 'B'];
+console.log(test);
+test.push('C');
+console.log(test);
+//to prevent add new element to tuple user readonly keyword
+let tuple = [1, 2];
+tuple.push(3);
+console.log(tuple);

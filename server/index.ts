@@ -97,17 +97,32 @@ console.log(typeof arr);
 
 //Tuple
 
-let user:[number,string]=[1,"John"];
+let user: [number, string] = [1, "John"];
 console.log(user);
 console.log(user[0]);
 console.log(user[1]);
 
-let detail:[x:string,y:number]=["Name",20];
+let detail: [x: string, y: number] = ["Name", 20];
 console.log(detail);
 console.log(detail[0]);
 console.log(detail[1]);
 
 //Destructure tuple
-let [x,y]=detail;
+let [x, y] = detail;
 console.log(x);
 console.log(y);
+
+//Add new element to tuple
+
+let test: [string, string] = ['A', 'B'];
+console.log(test);
+
+test.push('C');
+console.log(test);
+
+//to prevent add new element to tuple user readonly keyword
+
+let tuple: readonly [number, number] = [1, 2];
+tuple.push(3);
+//console.log(tuple);
+// output - server/index.ts:126:7 - error TS2339: Property 'push' does not exist on type 'readonly [number, number]'.
