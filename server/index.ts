@@ -92,3 +92,22 @@ console.log(ages);
 //Initialize empty array with type
 let arr: string[] = [];
 console.log(typeof arr);
+
+/*-----------------------------------------------------------------*/
+
+//Tuple
+
+let user:[number,string]=[1,"John"];
+console.log(user);
+console.log(user[0]);
+console.log(user[1]);
+
+let detail:[x:string,y:number]=["Name",20];
+console.log(detail);
+console.log(detail[0]);
+console.log(detail[1]);
+
+//Destructure tuple
+let [x,y]=detail;
+console.log(x);
+console.log(y);

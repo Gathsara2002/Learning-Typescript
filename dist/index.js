@@ -66,5 +66,22 @@ ages.push(50);
 console.log(ages);
 //let arr=[];
 //console.log(typeof arr); //server/index.ts:90:20 - error TS7005: Variable 'arr' implicitly has an 'any[]' type.
-let arr = ['A', 'B'];
+//Initialize empty array with type
+let arr = [];
 console.log(typeof arr);
+/*-----------------------------------------------------------------*/
+//Tuple
+let user = [1, "John"];
+console.log(user);
+console.log(user[0]);
+console.log(user[1]);
+user.push("A");
+console.log(user);
+let detail = ["Name", 20];
+console.log(detail);
+console.log(detail[0]);
+console.log(detail[1]);
+//Destructure tuple
+let [x, y] = detail;
+console.log(x);
+console.log(y);
