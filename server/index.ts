@@ -123,6 +123,45 @@ console.log(test);
 //to prevent add new element to tuple user readonly keyword
 
 let tuple: readonly [number, number] = [1, 2];
-tuple.push(3);
+//tuple.push(3);
 //console.log(tuple);
 // output - server/index.ts:126:7 - error TS2339: Property 'push' does not exist on type 'readonly [number, number]'.
+
+
+/*-----------------------------------------------------------------*/
+
+//Enums
+
+//Numeric enums
+
+enum myEnum {
+    FirstEnum,
+    SecondEnum,
+    ThirdEnum
+}
+
+console.log(myEnum.FirstEnum); //0
+console.log(myEnum.SecondEnum); //1
+console.log(myEnum.ThirdEnum); //2
+
+
+enum num {
+    First = 1,
+    Second
+}
+
+console.log(num.First); //1
+console.log(num.Second); //2
+
+
+//String enums
+
+enum days {
+    Monday = "Monday",
+    Sunday = "Sunday"
+}
+
+console.log(days.Monday); //Monday
+console.log(days.Sunday); //Sunday
+
+

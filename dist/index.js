@@ -90,5 +90,31 @@ test.push('C');
 console.log(test);
 //to prevent add new element to tuple user readonly keyword
 let tuple = [1, 2];
-tuple.push(3);
-console.log(tuple);
+//tuple.push(3);
+//console.log(tuple);
+// output - server/index.ts:126:7 - error TS2339: Property 'push' does not exist on type 'readonly [number, number]'.
+/*-----------------------------------------------------------------*/
+//Enums
+var myEnum;
+(function (myEnum) {
+    myEnum[myEnum["FirstEnum"] = 0] = "FirstEnum";
+    myEnum[myEnum["SecondEnum"] = 1] = "SecondEnum";
+    myEnum[myEnum["ThirdEnum"] = 2] = "ThirdEnum";
+})(myEnum || (myEnum = {}));
+console.log(myEnum.FirstEnum); //0
+console.log(myEnum.SecondEnum); //1
+console.log(myEnum.ThirdEnum); //2
+var num;
+(function (num) {
+    num[num["First"] = 1] = "First";
+    num[num["Second"] = 2] = "Second";
+})(num || (num = {}));
+console.log(num.First); //1
+console.log(num.Second); //2
+var days;
+(function (days) {
+    days["Monday"] = "Monday";
+    days["Sunday"] = "Sunday";
+})(days || (days = {}));
+console.log(days.Monday);
+console.log(days.Sunday);
