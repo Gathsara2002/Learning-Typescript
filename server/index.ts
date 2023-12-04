@@ -165,3 +165,52 @@ console.log(days.Monday); //Monday
 console.log(days.Sunday); //Sunday
 
 
+/*-----------------------------------------------------------------*/
+
+//Functions
+
+//void function (no return type)
+
+function printHello(): void {
+    console.log("Hello Typescript")
+}
+
+printHello();
+
+//return type function
+
+function calculateTax(income: number): number {
+    if (income > 300_000) {
+        return income * 0.2;
+    }
+    return income * 0.1;
+}
+
+let tax = calculateTax(500_000);
+console.log(tax);
+
+
+//optional parameter functions
+
+function printMarks1(mark: number, subject: string, opt?: number): string {
+    return mark + " for " + subject + " - " + opt;
+}
+
+console.log(printMarks1(80, 'Math')); //80 for Math - undefined
+
+
+function printMarks2(mark: number, subject: string, opt?: number): string {
+    return mark + " for " + subject + " - " + opt;
+}
+
+console.log(printMarks2(75, "ICT", 2023));  //75 for ICT - 2023
+
+
+function printMarks3(mark: number, subject: string, opt = 2022): string {
+    return mark + " for " + subject + " - " + opt;
+}
+
+console.log(printMarks3(85, "Science"));  //85 for Science - 2022
+console.log(printMarks3(85, "Science", 2024));  //85 for Science - 2024
+
+

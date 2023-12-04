@@ -95,6 +95,7 @@ let tuple = [1, 2];
 // output - server/index.ts:126:7 - error TS2339: Property 'push' does not exist on type 'readonly [number, number]'.
 /*-----------------------------------------------------------------*/
 //Enums
+//Numeric enums
 var myEnum;
 (function (myEnum) {
     myEnum[myEnum["FirstEnum"] = 0] = "FirstEnum";
@@ -111,10 +112,41 @@ var num;
 })(num || (num = {}));
 console.log(num.First); //1
 console.log(num.Second); //2
+//String enums
 var days;
 (function (days) {
     days["Monday"] = "Monday";
     days["Sunday"] = "Sunday";
 })(days || (days = {}));
-console.log(days.Monday);
-console.log(days.Sunday);
+console.log(days.Monday); //Monday
+console.log(days.Sunday); //Sunday
+/*-----------------------------------------------------------------*/
+//Functions
+//void function (no return type)
+function printHello() {
+    console.log("Hello Typescript");
+}
+printHello();
+//return type function
+function calculateTax(income) {
+    if (income > 300000) {
+        return income * 0.2;
+    }
+    return income * 0.1;
+}
+let tax = calculateTax(500000);
+console.log(tax);
+//optional parameter functions
+function printMarks1(mark, subject, opt) {
+    return mark + " for " + subject + " - " + opt;
+}
+console.log(printMarks1(80, 'Math')); //80 for Math - undefined
+function printMarks2(mark, subject, opt) {
+    return mark + " for " + subject + " - " + opt;
+}
+console.log(printMarks2(75, "ICT", 2023)); //75 for ICT - 2023
+function printMarks3(mark, subject, opt = 2022) {
+    return mark + " for " + subject + " - " + opt;
+}
+console.log(printMarks3(85, "Science")); //85 for Science - 2022
+console.log(printMarks3(85, "Science", 2024));
