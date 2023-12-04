@@ -254,7 +254,7 @@ car = {
 
 //primitive
 type AgeAlias = number;
-type NameAlias=string;
+type NameAlias = string;
 
 //Object
 type Employee = {
@@ -272,6 +272,22 @@ let employee: Employee = {
         console.log(date);
     }
 }
+
+
+/*-----------------------------------------------------------------*/
+
+//Union types ' | '
+
+function kgToLb(weight: number | string): number {
+    if (typeof weight == 'number') {
+        return weight * 2.2;
+    } else {
+        return parseInt(weight) * 2.2;
+    }
+}
+
+console.log(kgToLb('10'));
+console.log(kgToLb(10));
 
 
 
