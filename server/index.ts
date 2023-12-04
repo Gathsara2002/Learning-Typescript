@@ -290,6 +290,14 @@ console.log(kgToLb('10'));
 console.log(kgToLb(10));
 
 
+/*-----------------------------------------------------------------*/
+
+//Literal types
+
+type Qty = 50 | 100;
+let qty: Qty = 100;
+
+
 
 
 
