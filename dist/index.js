@@ -167,4 +167,11 @@ car = {
         console.log("Made in France");
     }
 };
-car.make();
+//create object
+let employee = {
+    id: 0,
+    name: "",
+    retire: (date) => {
+        console.log(date);
+    }
+};

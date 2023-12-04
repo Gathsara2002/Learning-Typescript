@@ -248,4 +248,32 @@ car = {
 }
 
 
+/*-----------------------------------------------------------------*/
+
+//Type Aliases
+
+//primitive
+type AgeAlias = number;
+type NameAlias=string;
+
+//Object
+type Employee = {
+    id: number,
+    name: string,
+    retire: (date: Date) => void
+}
+
+//create object
+
+let employee: Employee = {
+    id: 0,
+    name: "",
+    retire: (date: Date) => {
+        console.log(date);
+    }
+}
+
+
+
+
 
