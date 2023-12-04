@@ -186,3 +186,11 @@ function kgToLb(weight) {
     }
 }
 console.log(kgToLb('10'));
+console.log(kgToLb(10));
+let qty = 100;
+/*-----------------------------------------------------------------*/
+//Null & Undefined
+function greet(name) {
+    console.log(name);
+}
+greet(null);

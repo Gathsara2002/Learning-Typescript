@@ -298,6 +298,17 @@ type Qty = 50 | 100;
 let qty: Qty = 100;
 
 
+/*-----------------------------------------------------------------*/
+
+//Null & Undefined
+
+function greet(name: string | null): void {
+    console.log(name)
+}
+
+greet(null);
+
+
 
 
 
