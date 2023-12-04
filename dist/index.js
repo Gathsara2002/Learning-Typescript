@@ -145,8 +145,26 @@ function printMarks2(mark, subject, opt) {
     return mark + " for " + subject + " - " + opt;
 }
 console.log(printMarks2(75, "ICT", 2023)); //75 for ICT - 2023
+//default parameters
 function printMarks3(mark, subject, opt = 2022) {
     return mark + " for " + subject + " - " + opt;
 }
 console.log(printMarks3(85, "Science")); //85 for Science - 2022
-console.log(printMarks3(85, "Science", 2024));
+console.log(printMarks3(85, "Science", 2024)); //85 for Science - 2024
+/*-----------------------------------------------------------------*/
+//Objects
+let obj = {
+    p1: "Typescript",
+    p2: 2023
+};
+//object with function
+let car;
+car = {
+    type: "Bugatti",
+    model: "Chiron",
+    year: 202,
+    make() {
+        console.log("Made in France");
+    }
+};
+car.make();
