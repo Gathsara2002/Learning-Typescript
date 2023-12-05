@@ -302,13 +302,34 @@ let qty: Qty = 100;
 
 //Null & Undefined
 
-function greet(name: string | null): void {
+function greet(name: string | null | undefined): void {
     console.log(name)
 }
 
-greet(null);
+greet("John");  //John
+greet(null);    //null
+greet(undefined);    //undefined
 
 
+/*-----------------------------------------------------------------*/
+
+//Optional chaining (?.)
+
+type Customer = {
+    birthDay: Date
+}
+
+function getCustomer(id: number): Customer | null | undefined {
+    return id == 0 ? null : {birthDay: new Date()}
+}
+
+let customer = getCustomer(1);
+
+/*if (customer) {
+    console.log(customer.birthDay);
+}*/
+
+console.log(customer?.birthDay);
 
 
 

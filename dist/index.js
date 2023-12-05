@@ -193,4 +193,11 @@ let qty = 100;
 function greet(name) {
     console.log(name);
 }
-greet(null);
+greet("John"); //John
+greet(null); //null
+greet(undefined); //undefined
+function getCustomer(id) {
+    return id == 0 ? null : { birthDay: new Date() };
+}
+let customer = getCustomer(1);
+console.log(customer === null || customer === void 0 ? void 0 : customer.birthDay);
